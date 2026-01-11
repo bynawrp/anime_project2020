@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>AnimeLab - Top Tendance 2020</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script src="https://package.nsi.xyz/api/"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">AnimeLab</a>
+				<nav class="marget">
+					<ul>
+						<li><a href="generic.html">Sortie Anime 2021</a></li>
+            <li><a href="elements.html">Top Tendance</a></li>
+						<li><a href="article.html" class="active">Article</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+        <nsi-xyz add="menu" ref="0NSI 2020" theme="light"></nsi-xyz>
+				<!-- Main -->
+
+          <div class="up">
+                <h1 class="major">Article</h1>
+          </div>
+
+					<section id="main" class="wrapper color">
+						<div id="article"class="inner">
+
+              <h2 id="fisrt" class="titreh2">Le but du projet :</h2>
+
+              <p class="pcolor">Pour commencer cet article, nous allons vous expliquer quel était le but de notre site.<br>En effet, le but du projet été de créer un site internet en récupérant un Template déja réalisé sur le site <a href="https://html5up.net/" class="acolor"><i>HTML5UP</i></a> pour ensuite y intégrer un ou plusieurs scripts Javascript.</p>
+
+              <h2 class="titreh2">Les différentes pages du site :</h2>
+              <p class="pcolor">Tout d'abord, notre site internet est composé de 4 pages, toutes reliées les unes aux autres.<br>La première est la page d'acceuil ou nous pouvons observer plusieurs choses :</p>
+              <img src="images/page1.png" data-position="center center" />
+
+              <p class="pcolor">Premièrement nous avons un menu de navigation qui va permet de se diriger vers les différentes sections du site, un simple clique vous permettra d'aller à ce qui vous intéresse directement sur la page d'acceuil.</p>
+
+              <p class="pcolor">Maintenant concentrons nous sur le principal rajout de la page qui sont les sliders.<br>En effet, lorsque nous descendons dans les sections nommées "<a href="index.html#one" class="acolor"><i>Sortie Anime 2021</i></a>" (#one) et "<a href="index.html#two" class="acolor"><i>Top Tendance 2020</i></a>" (#two) nous pouvons remarquer des sliders qui sont tout simplement des defilements d'images.<br>Ces sliders sont utilisable notament grace à du JavaScript que nous allons vous présenter. Voici à quoi ils ressemblent :</p>
+
+              <img src="images/slider.png" data-position="center center" />
+              
+              <p class="pcolor"> Ces sliders ont été récupérés sur le site <a href="https://codepen.io/Multiple-Illusionsi/pen/jOOMYWr"class="acolor"><i>Codepen</i></a>. Afin qu'ils puissent s'intégrer parfaitement a notre site nous avons du un petit peu le modifié et maintenant, voici à quoi ressemble la construction du slider après modifications :</p>
+             
+              <h3 class="titreh3">HTML :</h3>
+                    <nsi-xyz add="code" lang="html">
+                    <iframe>
+                        <section id="one" class="wrapper style2 spotlights">
+                            <section class="largeur">
+                                <div class="slider" id="main-slider">
+                                    <div class="slider-wrapper">   
+                                        <img class="slide" src="images/mha.png" alt="1" data-position="center center" />
+                                        <img class="slide" src="images/drstone.png" alt="2" data-position="center center" />
+                                        <img class="slide" src="images/tpn.png" alt="3" data-position="center center" />
+                                        <img class="slide" src="images/sds.jpg" alt="4" data-position="center center" />
+                                    </div>
+                                </div>
+                                <div class="content left" >
+                                    <div class="inner">
+                                        <h2>Sortie Anime 2021</h2>
+                                        <p>De nouveaux animes commencent à être dévoilés pour 2021. Si toutes les annonces n’ont pas encore été faites, toutes celles qui l’ont été suscitent de l’enthousiasme pour la nouvelle année. Vous trouverez ci-dessous la liste des nouveautés et des animes à venir en 2021 !</p>
+                                        <ul class="actions">
+                                            <li><a href="generic.html" class="button">En savoir +</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </iframe>
+              </nsi-xyz>
+              <br>
+              <h3 class="titreh3">CSS :</h3>
+
+
+              <nsi-xyz add="code" lang="css">
+
+              .largeur {
+                height: 27.5em;
+              }
+
+              .left{
+                margin-left: 5em;
+              }
+
+              .slider {
+                  width: 30%;
+                  height: none;
+                  margin: 0 ;
+              }
+
+              #two .slide {
+                  max-width: 100%;
+                  min-height: 100%;
+                  object-fit: contain;
+                  position: absolute;
+                  opacity: 0;
+                  transition: opacity 0.5s linear;
+                  right: 0;
+              }
+
+
+              #one .slide {
+                  max-width: 100%;
+                  min-height: 100%;
+                  object-fit: contain;
+                  position: absolute;
+                  opacity: 0;
+                  transition: opacity 0.5s linear;
+              }
+
+              #one .slider-wrapper > .slide:first-child {
+                  opacity: 1;
+              }
+
+              #two .slider-wrapper > .slide:first-child {
+                  opacity: 1;
+              }
+
+
+              .position{
+                position: static;
+              }
+
+              #two{
+                background-color:  rgb(85, 92, 99);
+              }
+
+              </nsi-xyz>            
+ 
+              <br>
+              <h3 class="titreh3">JavaScript :</h3>
+
+              <nsi-xyz add="code" lang="js">
+
+                document.addEventListener('DOMContentLoaded', function() {
+                });
+                
+                window.onload = function() {  
+                  const slider = new AutoSlider("#main-slider") & new AutoSlider("#main-slider2"); 
+                };
+                
+                class AutoSlider {
+                  constructor(element) {
+                      this.el = document.querySelector(element);
+                      this.init();
+                  }
+                
+                  init() {
+                      this.slides = this.el.querySelectorAll(".slide");
+                      this.index = 0;
+                      this.timer = null;
+                      this.delay = 6000;
+                      this.action();
+                  }
+                
+                  _slideTo(slide) {
+                      const currentSlide = this.slides[slide];
+                      currentSlide.style.opacity = 1;
+                
+                      for (let i = 0; i < this.slides.length; i++) {
+                          let slide = this.slides[i];
+                          if (slide !== currentSlide) {
+                              slide.style.opacity = 0;
+                          }
+                      }
+                  }
+                
+                  action() {
+                      this.timer = setInterval(function () {
+                          this.index++;
+                          if (this.index == this.slides.length) {
+                              this.index = 0;
+                          }
+                          this._slideTo(this.index);
+                      }.bind(this), this.delay);
+                  }
+                
+                }
+              </nsi-xyz>
+              <br>
+              <p class="pcolor">Maintenant, abordons la deuxiemes page. Tout d'abord, nous avons gardé le menu initial de naviguation du template et nous avons remodulé la page à notre convenance avec le CSS notament au niveau de la dispositon des éléments. Pour ce faire nous avons du créer des classes (Class) ainsi que des identifiants (Id) afin qu'il n'y est pas de conflits dans les autres pages au niveau du CSS. </p>
+
+              <img src="images/page2.png" data-position="center center"/>
+              <br>
+              <p class="pcolor"> Ensuite toujours dans la seconde page, nous avons inséré un sommaire. Celui-ci va permettre de naviguer sur la page directement en cliquant sur le titre que vous souhaitez. <br>Voici le code du sommaire:</p>
+
+              <h3 class="titreh3">HTML :</h3>
+              <nsi-xyz add="code" lang="html">
+                <iframe>
+                  <div class="sommaire">
+                    <h2 class="color">Sommaire :</h2>
+                    <ul>
+                      <a href="#hiv2021"  class="color"><li>Liste des animes en hiver 2021</li></a>
+                      <a href="#print2021"  class="color"><li>Sortie d’animes au printemps 2021</li></a>
+                      <a href="#été2021" class="color"><li>Sortie des animés été 2021</li></a>
+                    </ul>
+                  </div>
+                </iframe>
+              </nsi-xyz>
+              <br>
+
+              <h3 class="titreh3">CSS :</h3>
+
+              <nsi-xyz add="code" lang="css">
+
+              .sommaire{
+                  width: 20em;
+                  border: 1px solid #686868;
+                  background: #fafafa;
+                  margin-bottom: 30px;
+                  padding: 14px 18px 3px;
+                  text-align: left;
+              }
+
+              .sommaire li:hover{
+                  font-weight: bold;
+                  color: #387BCC;
+              }
+
+              </nsi-xyz>
+              <br>
+
+              <p class="pcolor" >Maintenant, en ce qui concerne la troisiemes page, nous avons réutilisé le paterne précédament défini sur la deuxieme page et nous avons simplement modifié/supprimé et rajouté des elements via l'HTML dans cette page.</p>
+              <br>
+              <img src="images/page3.png" align="center" />
+              <p class="pcolor"> Aussi, nous avons intégrés des vidéos des animés tendance de 2020. Pour les insérées nous sommes aller sur <a href="https://www.youtube.com/?hl=fr&gl=FR" class="acolor"><i>Youtube</i></a> pour trouver les vidéos en question puis nous avons récuperés le code permettant de l'intégrer directement sur Youtube en cliquant sur le bouton "partager" puis sur "intégrer".</p>
+              <br>
+              <img src="images/yt.png" data-position="center center" />
+  
+
+              <p class="pcolor" > Enfin, la quatrième et dernière page est déstinée à la rédaction de notre article. Sur cette page nous avons pris le même menu et le même Template que sur les pages précédentes. </p>
+              <img src="images/page4.png" data-position="center center" />
+              <p class="pcolor">Afin d'afficher correctement les codes de notre site que nous voulons montrer nous avons utilisé l'API nsi.xyz, créée par nos professeurs.</p>
+              <p class="pcolor">Pour afficher le code une balise est nécéssaire, la voici :</p>     
+
+              <nsi-xyz add="code" lang="html">
+                <iframe>
+                  <nsi-xyz add="code" lang="html">  
+                </iframe>
+              </nsi-xyz>
+              <br>
+              <p class="pcolor"> On peut notamment modifier l'attribut "lang" qui va permettre de définir le language du code affiché. Il y a quatre languages  qui sont disponiblent sur l'API : HTML, CSS, Python et JavaScript.</p>
+
+              <p class="pcolor">Egalement nos professeurs voulaient que l’on importe un menu dépliant permettant de relier notre site aux différents sites du domaine <a href="nsi.xyz" class="acolor"><i>nsi.xyz</i></a>. Pour cela nous avons importé un script permettant d’intégrer directement ce menu automatiquement sur le site:</p>
+
+              <nsi-xyz add="code" lang="html">
+                <iframe>
+                  <script src="https://package.nsi.xyz/api/%22%3E"></script>
+                </iframe>
+              </nsi-xyz>
+              <br>
+              
+              <p class="pcolor">Cette balise permet d’appeler un script externe qui permettra ensuite d’implanter un menu. Ce script est utilisable grâce au rajout de cette balise :</p>
+
+              <nsi-xyz add="code" lang="html">
+                <iframe>
+                  <nsi-xyz add="menu" ref="0NSI 2020"></nsi-xyz>
+                </iframe>
+              </nsi-xyz>
+              <br>
+              <p class="pcolor">Ce menu dépliant est ajouté en haut à droite de la page :</p>
+
+              <img src="images/menu.png" data-position="center center" />
+            
+              <h2 class="titreh2">Les difficultés rencontrées / Les solutions apportées :</h2>
+              <p class="pcolor">Au niveau des difficultés rencontrées, la principale difficulté a été a cause de l'insertion du slider. En effet il a été difficile et long d'insérer un  slider sans qu'il y est de conflit CSS. Nous avons réussi a intégrer le slider après de longue heures de test en modifiant la taille maximum du slider et en mettant le slider en position absolute pour que toutes les images se superposent au même endroit.</p>
+              <p class="pcolor">Nous avons également eu des soucis au niveau du CSS car il y avait des conflits avec les balises. pour remédier a ce probleme nous avons appris utilisé les classes et les identifiant qui permettent de résoudre ce probleme. <br>Mise a part ces quelques problèmes nous n’avons rencontrés aucuns autres problèmes concernant les codes des pages.
+            </div>					
+				  </section>
+			</div>
+
+
+
+      
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li><li>Slider: <a href="https://codepen.io/Multiple-Illusionsi/pen/jOOMYWr" target="_blank">CodePen</a></li><li>Menu: <a href="https://nsi.xyz/" target="_blank">nsi-xyz</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
