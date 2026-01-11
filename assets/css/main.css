@@ -1686,7 +1686,7 @@ input, select, textarea {
 		left: 0;
 		overflow-x: hidden;
 		overflow-y: auto;
-		position: top;
+		position: fixed;
 		text-align: right;
 		top: 0;
 		width: 18em;
@@ -2034,6 +2034,7 @@ input, select, textarea {
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
+		margin-left: 18em;
 	}
 
 		#intro p {
@@ -2060,6 +2061,7 @@ input, select, textarea {
 
 			#intro {
 				background-attachment: scroll;
+				margin-left: 0;
 			}
 
 		}
@@ -2127,9 +2129,42 @@ input, select, textarea {
   position: static;
 }
 
+#one {
+	margin-left: 18em;
+}
+
 #two{
   background-color:  rgb(85, 92, 99);
+  margin-left: 18em;
 }
+
+#three {
+	margin-left: 18em;
+}
+
+#footer {
+	margin-left: 18em;
+}
+
+		@media screen and (max-width: 1280px) {
+
+			#one {
+				margin-left: 0;
+			}
+
+			#two {
+				margin-left: 0;
+			}
+
+			#three {
+				margin-left: 0;
+			}
+
+			#footer {
+				margin-left: 0;
+			}
+
+		}
 
 
 /*PAGE 2*/
